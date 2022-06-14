@@ -1,0 +1,12 @@
+name: Docker Flask Celery Redis Basic App
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+      - name: Build
+        run docker-compose up -d
